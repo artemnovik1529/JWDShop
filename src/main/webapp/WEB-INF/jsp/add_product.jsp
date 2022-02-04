@@ -7,16 +7,7 @@
 <head>
 	<title>Add product</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
-	<style>
-		table {
-			padding: 0;
-			margin-left: 450px;
-		}
-		p {
-			padding: 0;
-			margin-left: 280px;
-		}
-	</style>
+
 </head>
 <body>
 <fmt:setLocale value="${sessionScope.language}"/>
@@ -25,21 +16,21 @@
 	<div class="container" >
 
 		<c:if test="${error_product}">
-			<h5><p><font color = "red"> <fmt:message bundle="${loc}" key="language.invalidData"/></ font></p></h5>
+			<script type="text/javascript">
+				alert("<fmt:message bundle="${loc}" key="language.invalidData"/>");
+			</script>
 		</c:if>
 
 		<c:if test="${add_product }">
-			<c:if test="${action}" >
-				<script type="text/javascript">
-					alert("<fmt:message bundle="${loc}" key="language.addToDB"/>");
-				</script>
-			</c:if>
+			<script type="text/javascript">
+				alert("<fmt:message bundle="${loc}" key="language.addToDB"/>");
+			</script>
 		</c:if>
 
-		<h3> <p><font color = "black" style="margin-top: 50%; margin-left: 30%; margin-right: 30%"><fmt:message bundle="${loc}" key="language.addProduct"/></ font> </p></h3>
+		<h3> <p class="text-center"><font color = "black"><fmt:message bundle="${loc}" key="language.addProduct"/></ font> </p></h3>
 		<form name="editProfile" method="POST" action="shop">
 			<input type="hidden" name="command" value="add_new_product"/>
-			<div class="container h-60" style="padding-top: 10%">
+			<div>
 				<div>
 					<div class="card-body">
 						<div class="row gutters">
@@ -74,7 +65,7 @@
 					</div>
 				</div>
 				<div class="col-md-1 p-lg-2 mx-auto my-3">
-					<input class="btn btn-warning" type="submit" value="<fmt:message bundle="${loc}" key="language.save"/>">
+					<input class="btn btn-warning text-center" type="submit" value="<fmt:message bundle="${loc}" key="language.save"/>">
 				</div>
 			</div>
 		</form>

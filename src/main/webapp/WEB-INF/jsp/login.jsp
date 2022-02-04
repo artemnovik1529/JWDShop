@@ -8,12 +8,7 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
-    <style>
-        p {
-            padding: 0;
-            margin-left: 580px;
-        }
-    </style>
+
 </head>
 <body>
 <fmt:setLocale value="${sessionScope.language}"/>
@@ -56,7 +51,7 @@
         </section>
     </form>
     <div class="col-md-0 p-lg-0 mx-auto my-1 bg-white">
-        <h6> <p> <a href="${pageContext.request.contextPath}/shop?command=go_to_regist" class="nav-link active" ><fmt:message bundle="${loc}" key="language.signUpOnWebsite"/></a></p></h6>
+        <h6> <p> <a href="${pageContext.request.contextPath}/shop?command=go_to_regist" class="nav-link active text-center" ><fmt:message bundle="${loc}" key="language.signUpOnWebsite"/></a></p></h6>
     </div>
 </div>
 

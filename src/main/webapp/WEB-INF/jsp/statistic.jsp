@@ -17,8 +17,8 @@
     </div>
     <h4> <p> <font color = black style="margin-left: 28px">   <fmt:message bundle="${loc}" key="language.salesQuantity"/> </ font> </p></h4>
     <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead style="vertical-align: baseline">
+        <table class="table">
+            <thead>
             <tr>
                 <th>  <fmt:message bundle="${loc}" key="language.title"/>   </th>
                 <th>  <fmt:message bundle="${loc}" key="language.description"/>  </th>
@@ -43,7 +43,7 @@
         </table>
         <h4> <p> <font color = red style="margin-left: 28px">   <fmt:message bundle="${loc}" key="language.blockCustomers"/>:</ font> </p></h4>
         <div class="table-responsive">
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-sm ">
                 <thead>
                 <tr>
                     <th>  <fmt:message bundle="${loc}" key="language.id"/></th>

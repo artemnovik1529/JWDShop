@@ -24,18 +24,22 @@
     </div>
 
     <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead style="vertical-align: baseline">
+        <table class="table">
+            <thead>
             <tr>
                 <th></th>
                 <th><fmt:message bundle="${loc}" key="language.title"/></th>
                 <th><fmt:message bundle="${loc}" key="language.description"/></th>
                 <th><fmt:message bundle="${loc}" key="language.price"/></th>
+                <th><fmt:message bundle="${loc}" key="language.specification"/></th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
             </tr>
             <c:forEach var="product" items="${products}">
             <tr>
-                <td> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="65" height="65"></td>
+                <td> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="45" height="45"></td>
                 <td><c:out value="${product.name}" /></td>
                 <td><c:out value="${product.description}"/></td>
                 <td><c:out value="${product.price}" /></td>

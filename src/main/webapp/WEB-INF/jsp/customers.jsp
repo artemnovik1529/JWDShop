@@ -17,14 +17,15 @@
     </div>
     <div class="table-responsive">
         <div class="table-responsive">
-            <table class="table table-striped table-sm">
-                <thead style="vertical-align: baseline">
+            <table class="table">
+                <thead>
                 <tr>
                     <th><fmt:message bundle="${loc}" key="language.id"/></th>
                     <th><fmt:message bundle="${loc}" key="language.fName"/></th>
                     <th><fmt:message bundle="${loc}" key="language.lName"/></th>
                     <th><fmt:message bundle="${loc}" key="language.emailInfo"/></th>
                     <th><fmt:message bundle="${loc}" key="language.phone"/></th>
+                    <th></th>
                 </tr>
                 <c:forEach var="customer" items="${customers}">
                 <tr>
