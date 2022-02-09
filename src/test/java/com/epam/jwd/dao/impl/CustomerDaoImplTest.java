@@ -27,7 +27,7 @@ class CustomerDaoImplTest {
     static void setUp() throws ConnectionException {
         ConnectionPool.getInstance().initialize();
         dao = new CustomerDaoImpl();
-        customer = new Customer(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE);
+        customer = new Customer(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE,STATUS);
     }
 
     @AfterAll
@@ -49,11 +49,11 @@ class CustomerDaoImplTest {
     }
 
     @Test
-    void shouldUpdateFieldsInDBForCustomer(){
+    void shouldUpdateFieldsInDBForCustomer() {
         Customer expected =
-                new Customer(ID,"newFirstName","newLastName","new@email",PHONE_NUMBER,CARD_BALANCE);
+                new Customer(ID, "newFirstName", "newLastName", "new@email", PHONE_NUMBER, CARD_BALANCE, STATUS);
         Customer actual = dao.update(expected);
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test

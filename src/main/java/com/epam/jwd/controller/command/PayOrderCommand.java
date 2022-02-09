@@ -23,6 +23,7 @@ public class PayOrderCommand implements Command{
     private static final String PRODUCTS_ATTRIBUTE = "products";
     private static final String ID_CUSTOMER = "id";
     private static final String ERROR_ATTRIBUTE = "error";
+    private static final String BLOCK_ATTRIBUTE = "block";
     private static final String PAY_ATTRIBUTE = "pay";
     private final OrderService orderService = new OrderServiceImpl();
     private final CustomerService customerService = new CustomerServiceImpl();
@@ -53,7 +54,7 @@ public class PayOrderCommand implements Command{
         double orderPrice = orderService.getOrderPrice(products);
         CustomerDto customer = customerService.getById(customerId);
         OrderDto order = orderService.getById(orderId);
-
+        if (!customer.getBlock()) {
             if (customer.getCardBalance() < orderPrice){
                 orderService.delete(order);
                 context.addAttribute(ERROR_ATTRIBUTE,true);
@@ -61,10 +62,14 @@ public class PayOrderCommand implements Command{
                 double newBalance = customer.getCardBalance() - orderPrice;
                 customer.setCardBalance(newBalance);
                 order.setPrice(orderPrice);
+                order.setStatus(true);
                 customerService.update(customer);
                 orderService.update(order);
                 context.addAttribute(PAY_ATTRIBUTE,true);
-
+            }
+        }else{
+            orderService.delete(order);
+            context.addAttribute(BLOCK_ATTRIBUTE,true);
         }
         session.removeAttribute(ID_ORDER_ATTRIBUTE);
         context.addAttribute(PRODUCTS_ATTRIBUTE,products);
@@ -73,4 +78,5 @@ public class PayOrderCommand implements Command{
         return CONTEXT;
     }
 }
+
 

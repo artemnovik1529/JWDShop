@@ -20,13 +20,14 @@ class CustomerConverterTest {
     private static final String EMAIL = "test@email";
     private static final long PHONE_NUMBER = 375446377;
     private static final double CARD_BALANCE = 1000.5;
+    private static final boolean STATUS = false;
 
 
     @BeforeAll
     static void setUp(){
         converter =new CustomerConverter();
-        customer = new Customer(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE);
-        customerDto = new CustomerDto(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE);
+        customer = new Customer(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE,STATUS);
+        customerDto = new CustomerDto(ID,FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,CARD_BALANCE,STATUS);
     }
 
     @Test

@@ -6,12 +6,6 @@ import com.epam.jwd.service.dto.CustomerDto;
 
 public class CustomerConverter implements Converter<CustomerDto, Customer>{
 
-    /**
-     * Method to convert from Customer to CustomerDto
-     *
-     * @param customer entity for converting
-     * @return dto
-     */
     @Override
     public CustomerDto convert(Customer customer) {
         CustomerDto customerDto = new CustomerDto();
@@ -21,6 +15,7 @@ public class CustomerConverter implements Converter<CustomerDto, Customer>{
         customerDto.setEmail(customer.getEmail());
         customerDto.setPhoneNumber(customer.getPhoneNumber());
         customerDto.setCardBalance(customer.getCardBalance());
+        customerDto.setBlock(customer.isBlocked());
         return customerDto;
     }
 
@@ -39,6 +34,7 @@ public class CustomerConverter implements Converter<CustomerDto, Customer>{
         customer.setEmail(customerDto.getEmail());
         customer.setPhoneNumber(customerDto.getPhoneNumber());
         customer.setCardBalance(customerDto.getCardBalance());
+        customer.setBlocked(customerDto.getBlock());
         return customer;
     }
 }

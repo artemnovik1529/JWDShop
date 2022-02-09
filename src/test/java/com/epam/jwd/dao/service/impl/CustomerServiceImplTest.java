@@ -21,12 +21,13 @@ class CustomerServiceImplTest {
     private static final long PHONE_NUMBER = 375446377;
     private static final double CARD_BALANCE = 1000.5;
     private static final int ROWS_ON_PAGE = 10;
+    private static final boolean STATUS = false;
 
     @BeforeAll
     static void setUp() throws ConnectionException {
         ConnectionPool.getInstance().initialize();
         service = new CustomerServiceImpl();
-        customer = new CustomerDto(FIRST_NAME,LAST_NAME,EMAIL_PARAMETER,PHONE_NUMBER,CARD_BALANCE);
+        customer = new CustomerDto(FIRST_NAME,LAST_NAME,EMAIL_PARAMETER,PHONE_NUMBER,CARD_BALANCE,STATUS);
     }
 
     @AfterAll

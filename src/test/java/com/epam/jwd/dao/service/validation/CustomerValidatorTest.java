@@ -20,7 +20,7 @@ class CustomerValidatorTest {
     @BeforeAll
     static void setUp(){
         validator = new CustomerValidator();
-        customer = new CustomerDto(FIRST_NAME,LAST_NAME,EMAIL_PARAMETER,PHONE_NUMBER,CARD_BALANCE);
+        customer = new CustomerDto(FIRST_NAME,LAST_NAME,EMAIL_PARAMETER,PHONE_NUMBER,CARD_BALANCE,false);
     }
 
     @Test

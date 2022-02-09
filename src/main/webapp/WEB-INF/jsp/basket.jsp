@@ -72,6 +72,15 @@
             </script>
                </c:if>
 
+         <c:if test="${block}">
+         <h5>
+            <font color = "red">
+               <fmt:message bundle="${loc}" key="language.blockMessage"/>
+            </ font>
+            <h5>
+               </c:if>
+               </td>
+
          <c:if test="${pay}">
             <script type="text/javascript">
                alert("<fmt:message bundle="${loc}" key="language.orderPay"/>");

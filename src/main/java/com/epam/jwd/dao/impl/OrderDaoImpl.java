@@ -21,6 +21,7 @@ import java.util.List;
 public class OrderDaoImpl implements OrderDao {
     private static final Logger logger = LogManager.getLogger(OrderDaoImpl.class);
     private ConnectionPool pool = ConnectionPool.getInstance();
+    private static final String TABLE = "orders";
     private static final String ID_COLUMN = "id";
     private static final String CUSTOMER_ID_COLUMN = "customer_id";
     private static final String DATE_COLUMN = "date";
@@ -185,8 +186,8 @@ public class OrderDaoImpl implements OrderDao {
             }
         }
         return list;
-
     }
+
     private enum SQL {
         SAVE("INSERT INTO orders (customer_id, date, price, status ) VALUES (?, ?, ?, ?) "),
         FIND_BY_ID("SELECT id, customer_id, date, price, status FROM orders WHERE id = ? "),
