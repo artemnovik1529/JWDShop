@@ -41,7 +41,7 @@ public class AddNewProductCommand implements Command{
         if(service.isValid(context)){
             ProductDto product = parseContext(context);
             service.create(product);
-              context.addAttribute(ADD_PRODUCT, true);
+            context.addAttribute(ADD_PRODUCT, true);
         }else{
             context.addAttribute(PRODUCT_ERROR, true);
         }

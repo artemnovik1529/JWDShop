@@ -33,35 +33,35 @@
    <div class="table-responsive">
       <div class="table-responsive">
          <table class="table">
-      <tr>
-         <th><fmt:message bundle="${loc}" key="language.title"/></th>
-         <th><fmt:message bundle="${loc}" key="language.description"/></th>
-         <th><fmt:message bundle="${loc}" key="language.price"/></th>
-         <th></th>
-         <th></th>
-         <th></th>
-      </tr>
-      <c:forEach var="product" items="${products}">
-         <tr>
-            <td><c:out value="${product.name}" /></td>
-            <td><c:out value="${product.description}"/></td>
-            <td><c:out value="${product.price}" /><td>
+            <tr>
+               <th><fmt:message bundle="${loc}" key="language.title"/></th>
+               <th><fmt:message bundle="${loc}" key="language.description"/></th>
+               <th><fmt:message bundle="${loc}" key="language.price"/></th>
+               <th></th>
+               <th></th>
+               <th></th>
+            </tr>
+            <c:forEach var="product" items="${products}">
+               <tr>
+                  <td><c:out value="${product.name}" /></td>
+                  <td><c:out value="${product.description}"/></td>
+                  <td><c:out value="${product.price}" /><td>
 
-            <c:if test="${(pay == null) && (error == null) && (block == null)}">
-            <td> <a href="shop?command=remove_from_order&product_id=${product.id}" class="btn btn-danger"> <font color = "black"> <fmt:message bundle="${loc}" key="language.removeFrOrder"/> </ font> </a>   <td>
-            </c:if>
-         </tr>
-      </c:forEach>
-      <tr>
-         <td><h5><font color = "#082344"><fmt:message bundle="${loc}" key="language.cost"/>${order_price} </ font></h5><td>
-         <td><td>
-         <c:if test="${(pay == null) && (error == null) && (block == null)}">
-         <td><h4><a href="shop?command=pay_order" class="btn btn-warning"> <fmt:message bundle="${loc}" key="language.pay"/></a></h4></c:if></td>
-         <td></td>
-         <td></td>
-         <td></td>
+                  <c:if test="${(pay == null) && (error == null) && (block == null)}">
+                  <td> <a href="shop?command=remove_from_order&product_id=${product.id}" class="btn btn-danger"> <font color = "black"> <fmt:message bundle="${loc}" key="language.removeFrOrder"/> </ font> </a>   <td>
+                  </c:if>
+               </tr>
+            </c:forEach>
+            <tr>
+               <td><h5><font color = "#082344"><fmt:message bundle="${loc}" key="language.cost"/>${order_price} </ font></h5><td>
+               <td><td>
+               <c:if test="${(pay == null) && (error == null) && (block == null)}">
+               <td><h4><a href="shop?command=pay_order" class="btn btn-warning"> <fmt:message bundle="${loc}" key="language.pay"/></a></h4></c:if></td>
+               <td></td>
+               <td></td>
+               <td></td>
 
-      </tr>
+            </tr>
          </table>
          </c:if>
          </tr>
@@ -70,7 +70,7 @@
             <script type="text/javascript">
                alert("<fmt:message bundle="${loc}" key="language.errorBalance"/>");
             </script>
-               </c:if>
+         </c:if>
 
          <c:if test="${block}">
          <h5>
@@ -81,14 +81,14 @@
                </c:if>
                </td>
 
-         <c:if test="${pay}">
-            <script type="text/javascript">
-               alert("<fmt:message bundle="${loc}" key="language.orderPay"/>");
-            </script>
-         </c:if>
-         <div class="col-md-10 p-lg-2 mx-auto my-0">
-            <a class="btn btn-outline-secondary" href="${pageContext.request.contextPath}/shop?command=go_to_profile"> <-   <fmt:message bundle="${loc}" key="language.account"/> </a>
-         </div>
+               <c:if test="${pay}">
+               <script type="text/javascript">
+                  alert("<fmt:message bundle="${loc}" key="language.orderPay"/>");
+               </script>
+               </c:if>
+               <div class="col-md-10 p-lg-2 mx-auto my-0">
+                  <a class="btn btn-outline-secondary" href="${pageContext.request.contextPath}/shop?command=go_to_profile"> <-   <fmt:message bundle="${loc}" key="language.account"/> </a>
+               </div>
       </div>
    </div>
 </div>

@@ -62,7 +62,7 @@ public class RegistrationCommand implements Command{
         }else{
             if(!validation) {
                 context.addAttribute(ERROR_ATTRIBUTE,true);
-                   }else{
+            }else{
                 context.addAttribute(ERROR_UNIQUE_ATTRIBUTE, true);
             }
             return ERROR_CONTEXT;

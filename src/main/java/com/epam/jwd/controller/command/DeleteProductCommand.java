@@ -33,7 +33,7 @@ public class DeleteProductCommand implements Command{
 
     @Override
     public ResponseContext execute(RequestContext context) {
-       long id = Long.parseLong(context.getParameter(ID_PARAMETER));
+        long id = Long.parseLong(context.getParameter(ID_PARAMETER));
         ProductDto product = service.getById(id);
         service.delete(product);
         context.addAttribute(ATTRIBUTE,true);

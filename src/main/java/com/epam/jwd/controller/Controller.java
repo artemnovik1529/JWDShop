@@ -72,8 +72,8 @@ public class Controller extends HttpServlet {
     }
 
     private void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-         HttpSession session = req.getSession(true);
-         if(isNull(session.getAttribute(ROLE))){
+        HttpSession session = req.getSession(true);
+        if(isNull(session.getAttribute(ROLE))){
             session.setAttribute(ROLE, Role.UNKNOWN);
         }
         String commandName = req.getParameter(COMMAND_PARAM);

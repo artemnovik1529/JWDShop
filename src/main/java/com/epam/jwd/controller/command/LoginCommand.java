@@ -27,6 +27,8 @@ public class LoginCommand implements Command {
     private final UserService userService = new UserServiceImpl();
     private final CustomerService customerService = new CustomerServiceImpl();
     private static final ResponseContext LOGIN_CONTEXT = new ResponseContext() {
+
+
         @Override
         public String getPage() {
             return LOGIN_JSP;

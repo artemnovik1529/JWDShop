@@ -36,7 +36,7 @@
                 <td><c:if test="${order.status == 'true'}"> <fmt:message bundle="${loc}" key="language.statusPayFirst"/></c:if>
                     <c:if test="${order.status == 'false'}"> <fmt:message bundle="${loc}" key="language.statusPaySecond"/></c:if></td>
                 <td><a href="shop?command=about_order&id_order=${order.id}&page=${requestScope['page']}" class="nav-link active" style="color: orange"> <fmt:message bundle="${loc}" key="language.more"/></a></td>
-                    <td><c:if test="${(about != null) && (order.id == id_order)}">
+                <td><c:if test="${(about != null) && (order.id == id_order)}">
                 <tr class="bg-warning">
                     <th></th>
                     <th><fmt:message bundle="${loc}" key="language.product"/></th>
