@@ -25,7 +25,6 @@ public class CustomerDaoImpl implements CustomerDao {
     private static final String EMAIL_COlUMN = "email";
     private static final String PHONE_NUMBER_COlUMN = "phone_number";
     private static final String CARD_BALANCE_COlUMN = "card_balance";
-    private static final String STATUS_COlUMN = "status";
     private static final int ROWS_ON_PAGE = 10;
 
     @Override
@@ -38,7 +37,6 @@ public class CustomerDaoImpl implements CustomerDao {
             statement.setString(4, customer.getEmail());
             statement.setLong(5, customer.getPhoneNumber());
             statement.setDouble(6, customer.getCardBalance());
-            statement.setBoolean(7, customer.isBlocked());
             statement.executeUpdate();
         } catch (SQLException | ConnectionException e) {
             logger.error("Customer wasn't saved");
@@ -65,7 +63,6 @@ public class CustomerDaoImpl implements CustomerDao {
                 customer.setEmail(resultSet.getString(EMAIL_COlUMN));
                 customer.setPhoneNumber(Long.parseLong(resultSet.getString(PHONE_NUMBER_COlUMN)));
                 customer.setCardBalance(resultSet.getDouble(CARD_BALANCE_COlUMN));
-                customer.setBlocked(resultSet.getBoolean(STATUS_COlUMN));
             }
             return customer;
         } catch (SQLException | ConnectionException e) {
@@ -89,8 +86,7 @@ public class CustomerDaoImpl implements CustomerDao {
             statement.setString(3, customer.getEmail());
             statement.setLong(4, customer.getPhoneNumber());
             statement.setDouble(5, customer.getCardBalance());
-            statement.setBoolean(6, customer.isBlocked());
-            statement.setLong(7, customer.getId());
+            statement.setLong(6, customer.getId());
             statement.executeUpdate() ;
         } catch (SQLException | ConnectionException e) {
             logger.error("Customer wasn't updated");
@@ -126,8 +122,7 @@ public class CustomerDaoImpl implements CustomerDao {
                 String email = resultSet.getString(EMAIL_COlUMN);
                 long phone = resultSet.getLong(PHONE_NUMBER_COlUMN);
                 double cardBalance = resultSet.getDouble(CARD_BALANCE_COlUMN);
-                boolean blocked = resultSet.getBoolean(STATUS_COlUMN);
-                list.add(new Customer(id,firstName,lastName,email,phone,cardBalance,blocked));
+                list.add(new Customer(id,firstName,lastName,email,phone,cardBalance));
             }
         } catch (SQLException | ConnectionException e) {
             logger.error("List was not received");
@@ -151,8 +146,7 @@ public class CustomerDaoImpl implements CustomerDao {
                 String email = resultSet.getString(EMAIL_COlUMN);
                 long phone = resultSet.getLong(PHONE_NUMBER_COlUMN);
                 double cardBalance = resultSet.getDouble(CARD_BALANCE_COlUMN);
-                boolean blocked = resultSet.getBoolean(STATUS_COlUMN);
-                list.add(new Customer(id,firstName,lastName,email,phone,cardBalance,blocked));
+                list.add(new Customer(id,firstName,lastName,email,phone,cardBalance));
             }
         } catch (SQLException | ConnectionException e) {
             logger.error("List was not received");
@@ -192,13 +186,13 @@ public class CustomerDaoImpl implements CustomerDao {
 
 
     private enum SQL {
-        SAVE("INSERT INTO customers (id, first_name, last_name, email, phone_number, card_balance, status) VALUES (?, ?, ?, ?, ?, ?, ?) "),
-        FIND_BY_ID("SELECT id, first_name, last_name, email, phone_number, card_balance, status FROM customers WHERE id = ? "),
-        UPDATE("UPDATE customers SET  first_name = ?, last_name = ?, email = ?, phone_number = ?, card_balance = ?, status = ? WHERE id = ?"),
+        SAVE("INSERT INTO customers (id, first_name, last_name, email, phone_number, card_balance) VALUES (?, ?, ?, ?, ?, ?) "),
+        FIND_BY_ID("SELECT id, first_name, last_name, email, phone_number, card_balance FROM customers WHERE id = ? "),
+        UPDATE("UPDATE customers SET  first_name = ?, last_name = ?, email = ?, phone_number = ?, card_balance = ? WHERE id = ?"),
         DELETE("DELETE FROM customers WHERE id = ? "),
-        FIND_ALL("SELECT id, first_name, last_name, email, phone_number, card_balance, status FROM customers"),
-        FIND_INFO("SELECT id, first_name, last_name, email, phone_number, card_balance, status FROM customers WHERE id = ?"),
-        FIND_10_ROWS("SELECT id, first_name, last_name, email, phone_number, card_balance, status FROM customers LIMIT ?,"+ROWS_ON_PAGE);
+        FIND_ALL("SELECT id, first_name, last_name, email, phone_number, card_balance FROM customers"),
+        FIND_INFO("SELECT id, first_name, last_name, email, phone_number, card_balance FROM customers WHERE id = ?"),
+        FIND_10_ROWS("SELECT id, first_name, last_name, email, phone_number, card_balance FROM customers LIMIT ?,"+ROWS_ON_PAGE);
 
         private final String query;
 

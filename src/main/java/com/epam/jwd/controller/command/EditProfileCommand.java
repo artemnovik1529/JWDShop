@@ -72,6 +72,6 @@ public class EditProfileCommand implements Command{
         String email = context.getParameter(EMAIL_PARAMETER);
         long phoneNumber = Long.parseLong(context.getParameter(PHONE_NUMBER_PARAMETER));
         double cardBalance = Double.parseDouble(context.getParameter(CARD_BALANCE_PARAMETER));
-        return new CustomerDto(firstName,lastName,email,phoneNumber,cardBalance,false);
+        return new CustomerDto(firstName,lastName,email,phoneNumber,cardBalance);
     }
 }

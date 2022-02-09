@@ -46,9 +46,9 @@
                 <td><a href="shop?command=about_product&id_product=${product.id}&page=${requestScope['page']}" class="nav-link active" style="color: orange"><fmt:message bundle="${loc}" key="language.more"/></a>
                 </td>
                 <td><c:if test="${(sessionScope.role.name == 'customer') && (customer != null)}">
-                <td><a href="shop?command=add_to_order&id=${product.id}&page=${requestScope['page']}" class="nav-link active" style="color: orange"> <fmt:message bundle="${loc}" key="language.addToOrder"/></a></c:if></td>
+                <td><a href="shop?command=add_to_order&id=${product.id}&page=${requestScope['page']}" class="btn btn-warning" style="color: black"> <fmt:message bundle="${loc}" key="language.addToOrder"/></a></c:if>
                 <td><c:if test="${sessionScope.role.name == 'admin'}">
-                    <a href="shop?command=go_to_edit_product&id=${product.id}&name=${product.name}&description=${product.description}&price=${product.price}" class="nav-link active" style="color: orange"><fmt:message bundle="${loc}" key="language.correct"/></a></c:if></td>
+                    <a href="shop?command=go_to_edit_product&id=${product.id}&name=${product.name}&description=${product.description}&price=${product.price}" class="btn btn-warning" style="color: black"><fmt:message bundle="${loc}" key="language.correct"/></a></c:if></td>
                 <td width="650"><c:if test="${(specification != null) && (product.id == id_product)}">
                     <c:out value="${specification}" />  </c:if></td>
                 </c:forEach>

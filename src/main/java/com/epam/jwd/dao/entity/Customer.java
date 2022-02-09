@@ -10,19 +10,17 @@ public class Customer implements Entity {
     private String email;
     private long phoneNumber;
     private double cardBalance;
-    private boolean blocked;
 
     public Customer(){}
 
     public Customer(long id,  String firstName, String lastName,
-                    String email, long phoneNumber, double cardBalance, boolean blocked) {
+                    String email, long phoneNumber, double cardBalance) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.cardBalance = cardBalance;
-        this.blocked = blocked;
     }
 
     @Override
@@ -74,13 +72,6 @@ public class Customer implements Entity {
         this.cardBalance = cardBalance;
     }
 
-    public boolean isBlocked() {
-        return blocked;
-    }
-
-    public void setBlocked(boolean blocked) {
-        this.blocked = blocked;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -118,7 +109,6 @@ public class Customer implements Entity {
                 ", email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 ", cardBalance=" + cardBalance +
-                ", blocked=" + blocked +
                 '}';
     }
 }

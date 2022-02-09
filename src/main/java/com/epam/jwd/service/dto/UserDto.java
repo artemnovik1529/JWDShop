@@ -16,7 +16,14 @@ public class UserDto {
 
     public UserDto( String login, String password) {
         this.login = login;
-        this.password = password;}
+        this.password = password;
+    }
+
+    public UserDto( String login, String password, Role role) {
+        this.login = login;
+        this.password = password;
+        this.role= role;
+    }
 
     public long getId() {
         return id;

@@ -41,31 +41,7 @@
             </c:forEach>
             </thead>
         </table>
-        <h4> <p> <font color = red style="margin-left: 28px">   <fmt:message bundle="${loc}" key="language.blockCustomers"/>:</ font> </p></h4>
-        <div class="table-responsive">
-            <table class="table table-striped table-sm ">
-                <thead>
-                <tr>
-                    <th>  <fmt:message bundle="${loc}" key="language.id"/></th>
-                    <th>  <fmt:message bundle="${loc}" key="language.fName"/></th>
-                    <th>  <fmt:message bundle="${loc}" key="language.lName"/></th>
-                    <th>  <fmt:message bundle="${loc}" key="language.emailInfo"/></th>
-                    <th>  <fmt:message bundle="${loc}" key="language.phone"/></th>
-                </tr>
-                <c:forEach var="customer" items="${customers}">
-                <c:if test="${customer.block}">
-                <tr>
-                    <td><c:out value="${customer.id}" /></td>
-                    <td><c:out value="${customer.firstName}"/></td>
-                    <td><c:out value="${customer.lastName}"/></td>
-                    <td><c:out value="${customer.email}"/></td>
-                    <td><c:out value="${customer.phoneNumber}"/></td>
-                </tr>
-                </c:if>
-                </c:forEach>
-            </table>
-            </table>
-        </div>
+    </div>
     </div>
 </main>
 </div>

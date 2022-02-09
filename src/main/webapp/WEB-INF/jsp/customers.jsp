@@ -34,20 +34,6 @@
                     <td><c:out value="${customer.lastName}"/></td>
                     <td><c:out value="${customer.email}"/></td>
                     <td><c:out value="${customer.phoneNumber}"/></td>
-
-                    <form name="block" method="POST" action="shop">
-                        <input type="hidden" name="command" value="block"/>
-                        <input type="hidden" name="page" value="${requestScope['page']}" />
-                        <input type="hidden" name="id" value="${customer.id}" />
-                        <td> <c:if test="${!customer.block}">
-                            <div class="col-md-5 p-lg-1 mx-auto my-0">
-                                <input class="btn btn-outline-secondary" type="submit" value="<fmt:message bundle="${loc}" key="language.block"/>">
-                            </div> </td></c:if>
-                        <c:if test="${customer.block}">
-                            <div class="col-md-5 p-lg-1 mx-auto my-0">
-                                <input class="btn btn-danger" type="submit" value="<fmt:message bundle="${loc}" key="language.unblock"/>">
-                            </div> </td></c:if>
-                    </form>
                 </tr>
                 </c:forEach>
             </table>
@@ -70,7 +56,6 @@
         </nav>
     </div>
 </main>
-
 </body>
 <jsp:include page="blocks/footer.jsp"></jsp:include>
 </html>

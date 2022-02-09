@@ -24,7 +24,6 @@ public enum CommandType {
     REGISTRATION(RegistrationCommand.getInstance(), Role.UNKNOWN, Role.CUSTOMER),
     ADD_CUSTOMER(AddCustomerCommand.getInstance(), Role.CUSTOMER),
     SHOW_PRODUCTS(ShowProductsCommand.getInstance(), Role.UNKNOWN, Role.CUSTOMER, Role.ADMIN),
-    BLOCK(BlockCustomerCommand.getInstance(),Role.ADMIN),
     EDIT_PRODUCT(EditProductCommand.getInstance(),Role.ADMIN),
     DELETE_PRODUCT(DeleteProductCommand.getInstance(),Role.ADMIN),
     ADD_TO_ORDER(AddProductToOrderCommand.getInstance(),Role.CUSTOMER),

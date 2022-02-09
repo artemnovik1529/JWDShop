@@ -127,7 +127,7 @@
       <h5>
          <ul class="nav justify-content-left" style="margin-left: 11px">
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=show_customers&page=1" class="nav-link active text-grey" >
+               <a href="${pageContext.request.contextPath}/shop?command=show_customers&page=1" class="nav-link active" >
                   <fmt:message bundle="${loc}" key="language.customers"/>
                </a>
             </li>

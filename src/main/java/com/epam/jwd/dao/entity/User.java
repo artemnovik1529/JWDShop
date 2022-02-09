@@ -15,6 +15,18 @@ public class User implements Entity {
         this.password = password;
     }
 
+    public User(Integer roleId, String login, String password) {
+        this.roleId = roleId;
+        this.login = login;
+        this.password = password;
+    }
+
+    public User(long id, Integer roleId, String login, String password) {
+        this.id = id;
+        this.roleId = roleId;
+        this.login = login;
+        this.password = password;
+    }
 
     @Override
     public long getId() {
