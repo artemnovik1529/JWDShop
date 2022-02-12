@@ -39,11 +39,6 @@ class UserDaoImplTest {
         Assertions.assertEquals(user,savedUser);
     }
 
-    @Test
-    void shouldReturnUserFromDBById(){
-        User actualUser = dao.findById(ID);
-        Assertions.assertEquals(user,actualUser);
-    }
 
     @Test
     void shouldUpdateFieldsInDBForUser(){
@@ -66,11 +61,6 @@ class UserDaoImplTest {
         Assertions.assertNotEquals(expectedSize,actualSize);
     }
 
-    @Test
-    void shouldCheckExistenceOfUser_WithLoginAndPassword(){
-        boolean actual = dao.findByLoginAndPassword(user);
-        Assertions.assertTrue(actual);
-    }
 
     @Test
     void shouldReturnUserRole(){
@@ -83,12 +73,5 @@ class UserDaoImplTest {
     void shouldCheckUniquenessOfLogin_BeforeSavingNewUser(){
         boolean actual = dao.isUniqueLogin(user);
         Assertions.assertFalse(actual);
-    }
-
-    @Test
-    void shouldReturnUserByLogin(){
-        User expected = user;
-        User actual = dao.findByLogin(LOGIN);
-        Assertions.assertEquals(expected,actual);
     }
 }

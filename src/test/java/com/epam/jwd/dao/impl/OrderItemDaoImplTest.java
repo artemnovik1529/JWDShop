@@ -33,18 +33,6 @@ class OrderItemDaoImplTest {
         ConnectionPool.getInstance().shutDown();
     }
 
-    @Test
-    void shouldSaveAndReturnOrderItem() {
-        OrderItem saved = dao.save(item);
-        Assertions.assertNotNull(saved);
-        Assertions.assertEquals(item, saved);
-    }
-
-    @Test
-    void shouldReturnOrderItemFromDBById() {
-        OrderItem orderFromDB = dao.findById(ID);
-        Assertions.assertNotNull(orderFromDB);
-    }
 
     @Test
     void shouldUpdateFieldsInDBForOrderItem() {
@@ -53,11 +41,6 @@ class OrderItemDaoImplTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void shouldDeleteOrderItemFromDB(){
-        boolean actual = dao.delete(item);
-        Assertions.assertTrue(actual);
-    }
 
     @Test
     void shouldReturnListOfOrderItems() {

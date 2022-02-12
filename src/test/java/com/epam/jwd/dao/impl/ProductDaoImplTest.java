@@ -54,11 +54,6 @@ class ProductDaoImplTest {
     }
 
     @Test
-    void shouldDeleteProductFromDB(){
-        boolean actual = dao.delete(product);
-        Assertions.assertTrue(actual);
-    }
-    @Test
     void shouldReturnListOfProducts(){
         int expectedSize = 0;
         int actualSize = dao.findAll().size();

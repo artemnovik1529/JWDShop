@@ -35,18 +35,6 @@ class CustomerDaoImplTest {
         ConnectionPool.getInstance().shutDown();
     }
 
-    @Test
-    void shouldSaveAndReturnCustomer(){
-        Customer saved = dao.save(customer);
-        Assertions.assertNotNull(saved);
-        Assertions.assertEquals(customer,saved);
-    }
-
-    @Test
-    void shouldReturnCustomerFromDBById(){
-        Customer actual = dao.findById(ID);
-        Assertions.assertEquals(customer,actual);
-    }
 
     @Test
     void shouldUpdateFieldsInDBForCustomer() {
@@ -56,11 +44,6 @@ class CustomerDaoImplTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void shouldDeleteCustomerFromDB(){
-        boolean actual = dao.delete(customer);
-        Assertions.assertTrue(actual);
-    }
 
     @Test
     void shouldReturnListOfCustomers(){
@@ -69,11 +52,7 @@ class CustomerDaoImplTest {
         Assertions.assertNotEquals(expectedSize,actualSize);
     }
 
-    @Test
-    void shouldCheckExistenceOfCustomerInTable(){
-        boolean actual = dao.findInfo(ID);
-        Assertions.assertTrue(actual);
-    }
+
 
     @Test
     void shouldReturnListOfCustomersForPageOnWebsite(){

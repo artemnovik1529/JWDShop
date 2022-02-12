@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 class CustomerServiceImplTest {
     private static CustomerDto customer;
     private static CustomerService service;
-    private static final long ID = 14;
+    private static final long ID = 0;
     private static final String FIRST_NAME= "NameTest";
     private static final String LAST_NAME = "SurnameTst";
     private static final String EMAIL_PARAMETER = "test@email";
@@ -47,11 +47,7 @@ class CustomerServiceImplTest {
         Assertions.assertTrue(actual <= ROWS_ON_PAGE);
     }
 
-    @Test
-    void shouldReturnCustomerFromDBById(){
-        CustomerDto actual = service.getById(ID);
-        Assertions.assertEquals(customer,actual);
-    }
+
     @Test
     void shouldUpdateFieldsInDBForCustomer(){
         CustomerDto actual = service.update(customer);

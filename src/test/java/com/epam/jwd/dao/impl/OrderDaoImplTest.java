@@ -44,11 +44,6 @@ class OrderDaoImplTest {
         Assertions.assertEquals(order, saved);
     }
 
-    @Test
-    void shouldReturnOrderFromDBById() {
-        Order orderFromDB = dao.findById(ID);
-        Assertions.assertNotNull(orderFromDB);
-    }
 
     @Test
     void shouldUpdateFieldsInDBForOrder() {
@@ -57,11 +52,6 @@ class OrderDaoImplTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    void shouldDeleteOrderFromDB() {
-        boolean actual = dao.delete(order);
-        Assertions.assertTrue(actual);
-    }
 
     @Test
     void shouldReturnListOfOrders() {

@@ -35,7 +35,6 @@ public enum CommandType {
     ABOUT_PRODUCT(AboutProductCommand.getInstance(),Role.CUSTOMER, Role.ADMIN, Role.UNKNOWN ),
     ADD_NEW_PRODUCT(AddNewProductCommand.getInstance(),Role.ADMIN),
     EDIT_PROFILE(EditProfileCommand.getInstance(),Role.CUSTOMER),
-    //todo delete_profile for customer
     SHOW_CUSTOMERS(ShowCustomersCommand.getInstance(),Role.ADMIN);
 
     private final Command command;
