@@ -76,7 +76,8 @@
         </c:if>
         <li class="page-item"><a class="page-link" style="color: gray" href="shop?command=order_history&page=1">1</a></li>
         <li class="page-item"><a class="page-link" style="color: gray" href="shop?command=order_history&page=2">2</a></li>
-        <c:if test="${requestScope['page']<2}">
+        <li class="page-item"><a class="page-link" style="color: gray" href="shop?command=order_history&page=3">3</a></li>
+        <c:if test="${requestScope['page']<3}">
             <li class="page-item">
                 <a class="page-link" style="color: gray" href="shop?command=order_history&page=${requestScope['page']+1}">Next</a>
             </li>

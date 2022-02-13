@@ -39,7 +39,7 @@
             </tr>
             <c:forEach var="product" items="${products}">
             <tr>
-                <td> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="45" height="45"></td>
+                <td><a href="https://drive.google.com/drive/folders/1Pm4fU-_Z1-iByw8mqW1ux3-nJZChoyRt?usp=sharing"> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="36" height="36"></a></td>
                 <td><c:out value="${product.name}" /></td>
                 <td><c:out value="${product.description}"/></td>
                 <td><c:out value="${product.price}" /></td>
