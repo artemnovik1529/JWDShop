@@ -6,23 +6,14 @@
 <head>
 	<title>Edit product</title>
 	<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
-	<style>
-		table {
-			padding: 0;
-			margin-left: 450px;
-		}
-		p {
-			padding: 0;
-			margin-left: 280px;
-		}
-	</style>
+
 </head>
 <body>
 <fmt:setLocale value="${sessionScope.language}"/>
 <fmt:setBundle basename="language" var="loc"/>
 <div class= "bg-white">
 
-	<div class="container" >
+	<div class="container">
 
 
 		<c:if test="${error_edit}">
@@ -47,7 +38,7 @@
 					<div class="card-body">
 						<div class="row gutters">
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<h6 class="mb-2 text-primary" style="color: black"><fmt:message bundle="${loc}" key="language.prodInfo"/></h6>
+								<h6 class="mb-2 text-primary text-black"><fmt:message bundle="${loc}" key="language.prodInfo"/></h6>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
@@ -82,7 +73,7 @@
 					</div>
 					<c:if test="${(remove_product == null) && (edit_product == null)}">
 				</div>
-				<div class="col-md-2 p-lg-1 mx-auto my-3">
+				<div class="col-md-2 p-lg-1 mx-auto my-3 ">
 					<input class="btn btn-warning" type="submit" value="<fmt:message bundle="${loc}" key="language.update"/>">
 				</div>
 			</div>

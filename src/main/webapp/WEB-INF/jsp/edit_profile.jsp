@@ -26,7 +26,9 @@
 
 
 		<c:if test="${error_edit}">
-			<h5><p><font color = "red"> <fmt:message bundle="${loc}" key="language.invalidData"/></ font><p></h5>
+			<script type="text/javascript">
+				alert("<fmt:message bundle="${loc}" key="language.invalidData"/>");
+			</script>
 		</c:if>
 
 

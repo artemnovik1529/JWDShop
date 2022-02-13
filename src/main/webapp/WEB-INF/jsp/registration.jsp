@@ -15,12 +15,18 @@
 <fmt:setBundle basename="language" var="loc"/>
 <div class= "bg-white">
 
+    <c:if test="${error_login}" >
+        <script type="text/javascript">
+            alert("<fmt:message bundle="${loc}" key="language.invalidData"/>");
+        </script>
+    </c:if>
+
     <c:if test="${error_unique}">
-        <h7><p><font color = "red"> <fmt:message bundle="${loc}" key="language.uniqueMessage"/></ font><p></h7>
+        <script type="text/javascript">
+            alert("<fmt:message bundle="${loc}" key="language.uniqueMessage"/>");
+        </script>
     </c:if>
-    <c:if test="${error_login}">
-        <h6><p><font color = "red"> <fmt:message bundle="${loc}" key="language.invalidData"/></ font><p></h6>
-    </c:if>
+
 
     <font color = "black"> </font>
     <form name="loginForm" method="POST" action="shop">
