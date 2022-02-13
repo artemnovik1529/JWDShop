@@ -141,7 +141,7 @@
         <div class="notfound-404">
             <h1>404</h1>
             <h2>Page not found</h2>
-            <h3>JWD Shop is died:(</h3>
+            <h3>JWD Shop died:(</h3>
         </div>
         <a href="${pageContext.request.contextPath}/shop?command=default">Home</a>
     </div>
