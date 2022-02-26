@@ -31,7 +31,7 @@
             <c:forEach var="order" items="${orders}">
                 <tr>
                 <td><c:out value="${order.id}" /></td>
-                <td><c:out value="${order.price}"/></td>
+                <td><c:out value="${order.price} BYN"/></td>
                 <td><c:out value="${order.orderDate}"/></td>
                 <td><c:if test="${order.status == 'true'}"> <fmt:message bundle="${loc}" key="language.statusPayFirst"/></c:if>
                     <c:if test="${order.status == 'false'}"> <fmt:message bundle="${loc}" key="language.statusPaySecond"/></c:if></td>
@@ -50,7 +50,7 @@
                         <td></td>
                         <td><c:out value="${product.name}" /></td>
                         <td><c:out value="${product.description}"/></td>
-                        <td><c:out value="${product.price}" /><td>
+                        <td><c:out value="${product.price}"/> BYN<td>
                         <td></td>
                     </tr>
                 </c:forEach>

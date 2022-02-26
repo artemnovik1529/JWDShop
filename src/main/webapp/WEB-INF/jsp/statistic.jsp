@@ -29,7 +29,7 @@
                 <tr>
                     <td><c:out value="${product.name}" /></td>
                     <td><c:out value="${product.description}"/></td>
-                    <td><c:out value="${product.price}" /></td>
+                    <td><c:out value="${product.price}"/> BYN</td>
                     <td>
                         <c:forEach var="item" items="${items}">
                             <c:if test="${product.id == item.productId}">

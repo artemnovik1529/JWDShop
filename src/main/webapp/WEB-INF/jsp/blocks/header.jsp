@@ -61,7 +61,7 @@
                   <c:if test="${sessionScope.language == 'en' && (sessionScope.language != null)}">
                      <a href="${pageContext.request.contextPath}/shop?${pageContext.request.queryString}&locale=ru" class="nav-link px-2 text-white">RU</a>
                   </c:if>
-               </button>>
+               </button>
             </div>
          </div>
       </div>

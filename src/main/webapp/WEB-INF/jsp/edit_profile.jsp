@@ -41,6 +41,7 @@
 		<h3> <p><font color = "black"><fmt:message bundle="${loc}" key="language.editProf"/></ font> </p></h3>
 		<form name="editProfile" method="POST" action="shop">
 			<input type="hidden" name="command" value="edit_profile"/>
+			<input type="hidden" name="id" value="${customer.id}"/>
 
 			<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
 				<div class="card h-60">
@@ -52,31 +53,31 @@
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
 									<label for="firstName" style="color: gray"><fmt:message bundle="${loc}" key="language.fName"/></label>
-									<input type="text" class="form-control" name="first_name" placeholder="<fmt:message bundle="${loc}" key="language.enterFName"/>">
+									<input type="text" class="form-control" name="first_name" required value=${customer.firstName}>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
 									<label for="lastName" style="color: gray"><fmt:message bundle="${loc}" key="language.lName"/></label>
-									<input type="text" class="form-control" name="last_name" placeholder="<fmt:message bundle="${loc}" key="language.enterFName"/>">
+									<input type="text" class="form-control" name="last_name"  required value=${customer.lastName}>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
 									<label for="balance" style="color: gray"><fmt:message bundle="${loc}" key="language.balance"/></label>
-									<input type="text" class="form-control" name="card_balance" placeholder="<fmt:message bundle="${loc}" key="language.enterBalance"/>">
+									<input type="text" class="form-control" name="card_balance" required value=${customer.cardBalance}>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
 									<label for="eMail" style="color: gray"><fmt:message bundle="${loc}" key="language.emailInfo"/></label>
-									<input type="text" class="form-control" name="email" placeholder="<fmt:message bundle="${loc}" key="language.enterEmail"/>">
+									<input type="text" class="form-control" name="email" required value=${customer.email}>
 								</div>
 							</div>
 							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 								<div class="form-group">
 									<label for="phone" style="color: gray"><fmt:message bundle="${loc}" key="language.phone"/></label>
-									<input type="text" class="form-control" name="phone_number" placeholder="<fmt:message bundle="${loc}" key="language.enterPhone"/>">
+									<input type="text" class="form-control" name="phone_number" required value=${customer.phoneNumber}>
 								</div>
 							</div>
 						</div>

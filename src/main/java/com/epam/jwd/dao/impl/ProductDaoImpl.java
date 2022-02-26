@@ -21,7 +21,7 @@ public class ProductDaoImpl implements ProductDao {
     private static final String DESCRIPTION_COLUMN = "description";
     private static final String SPECIFICATION_COLUMN = "specification";
     private static final String PRICE_COLUMN = "price";
-    private static final int ROWS_ON_PAGE = 10;
+    private static final int ROWS_ON_PAGE = 8;
 
     @Override
     public Product save(Product product) {

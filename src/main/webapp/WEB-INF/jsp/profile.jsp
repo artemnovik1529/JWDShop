@@ -20,13 +20,13 @@
    <h5>
       <ul class="nav justify-content-left border-bottom pb-3 mb-3">
          <li class="nav-item">
-            <a href="${pageContext.request.contextPath}/shop?command=order_history&page=1" class="nav-link active" >
+            <a href="${pageContext.request.contextPath}/shop?command=order_history&page=1" class="nav-link text-warning" >
                <fmt:message bundle="${loc}" key="language.myOrders"/>
             </a>
          </li>
          <c:if test="${(id_order != null) }">
             <li class="nav-item">
-               <a href="shop?command=go_to_basket" class="nav-link" >
+               <a href="shop?command=go_to_basket" class="nav-link text-warning" >
                   <fmt:message bundle="${loc}" key="language.basket"/>
                </a>
             </li>
@@ -101,7 +101,7 @@
                               </h6>
                            </div>
                            <div class="col-sm-9 text-dark">
-                                 ${customer.cardBalance}
+                                 ${customer.cardBalance} BYN
                            </div>
                         </div>
                         <hr>
@@ -127,33 +127,33 @@
       <h5>
          <ul class="nav justify-content-left" style="margin-left: 11px">
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=show_customers&page=1" class="nav-link active" >
+               <a href="${pageContext.request.contextPath}/shop?command=show_customers&page=1" class="nav-link text-warning">
                   <fmt:message bundle="${loc}" key="language.customers"/>
                </a>
             </li>
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=go_to_add_product" class="nav-link active" >
+               <a href="${pageContext.request.contextPath}/shop?command=go_to_add_product" class="nav-link text-warning">
                   <fmt:message bundle="${loc}" key="language.addProduct"/>
                </a>
             </li>
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=show_products&page=1" class="nav-link active" >
+               <a href="${pageContext.request.contextPath}/shop?command=show_products&page=1" class="nav-link text-warning">
                   <fmt:message bundle="${loc}" key="language.editProduct"/>
                </a>
             </li>
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=order_history&page=1" class="nav-link active" >
+               <a href="${pageContext.request.contextPath}/shop?command=order_history&page=1" class="nav-link text-warning">
                   <fmt:message bundle="${loc}" key="language.orders"/>
                </a>
             </li>
             <li class="nav-item">
-               <a href="${pageContext.request.contextPath}/shop?command=go_to_stat" class="nav-link active" >
+               <a href="${pageContext.request.contextPath}/shop?command=go_to_stat" class="nav-link text-warning">
                   <fmt:message bundle="${loc}" key="language.stat"/>
                </a>
             </li>
          </ul>
          <div class="position-relative text-center bg-light">
-            <p><img src="images/klaviatura_telefon_rabochij_stol_179668_3840x216.jpg" height="80%" width="100%" ></p>
+            <p><img src="images/klaviatura_telefon_rabochij_stol_179668_3840x216.jpg" height="77.5%" width="100%"></p>
          </div>
          </c:if>
 </div>

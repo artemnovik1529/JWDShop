@@ -9,6 +9,7 @@ import com.epam.jwd.service.api.CustomerService;
 import com.epam.jwd.service.converter.Converter;
 import com.epam.jwd.service.converter.CustomerConverter;
 import com.epam.jwd.service.dto.CustomerDto;
+import com.epam.jwd.service.exception.ServiceException;
 import com.epam.jwd.service.validation.CustomerValidator;
 import com.epam.jwd.service.validation.Validator;
 

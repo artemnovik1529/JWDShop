@@ -55,7 +55,7 @@
                            <label for="firstName" style="color: gray">
                               <fmt:message bundle="${loc}" key="language.fName"/>
                            </label>
-                           <input type="text" class="form-control" name="first_name" placeholder="
+                           <input type="text" class="form-control" name="first_name" required placeholder="
                                  <fmt:message bundle="${loc}" key="language.enterFName"/>
                                  ">
                         </div>
@@ -65,7 +65,7 @@
                            <label for="lastName" style="color: gray">
                               <fmt:message bundle="${loc}" key="language.lName"/>
                            </label>
-                           <input type="text" class="form-control" name="last_name" placeholder="
+                           <input type="text" class="form-control" name="last_name" required placeholder="
                                  <fmt:message bundle="${loc}" key="language.enterLName"/>
                                  ">
                         </div>
@@ -75,7 +75,7 @@
                            <label for="balance" style="color: gray">
                               <fmt:message bundle="${loc}" key="language.balance"/>
                            </label>
-                           <input type="text" class="form-control" name="card_balance" placeholder="
+                           <input type="text" class="form-control" name="card_balance" required placeholder="
                                  <fmt:message bundle="${loc}" key="language.enterBalance"/>
                                  ">
                         </div>
@@ -85,7 +85,7 @@
                            <label for="eMail" style="color: gray">
                               <fmt:message bundle="${loc}" key="language.emailInfo"/>
                            </label>
-                           <input type="text" class="form-control" name="email" placeholder="
+                           <input type="text" class="form-control" name="email" required placeholder="
                                  <fmt:message bundle="${loc}" key="language.enterEmail"/>
                                  ">
                         </div>
@@ -95,8 +95,8 @@
                            <label for="phone" style="color: gray">
                               <fmt:message bundle="${loc}" key="language.phone"/>
                            </label>
-                           <input type="text" class="form-control" name="phone_number" placeholder="
-                                 <fmt:message bundle="${loc}" key="language.enterPhone"/>
+                           <input type="text" class="form-control" name="phone_number" required placeholder="
+                           <fmt:message bundle="${loc}" key="language.enterPhone"/>
                                  ">
                         </div>
                      </div>

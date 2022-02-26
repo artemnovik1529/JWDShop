@@ -45,7 +45,7 @@
                <tr>
                   <td><c:out value="${product.name}" /></td>
                   <td><c:out value="${product.description}"/></td>
-                  <td><c:out value="${product.price}" /><td>
+                  <td><c:out value="${product.price} BYN" /><td>
 
                   <c:if test="${(pay == null) && (error == null) && (block == null)}">
                   <td> <a href="shop?command=remove_from_order&product_id=${product.id}" class="btn btn-danger"> <font color = "black"> <fmt:message bundle="${loc}" key="language.removeFrOrder"/> </ font> </a>   <td>
@@ -53,7 +53,7 @@
                </tr>
             </c:forEach>
             <tr>
-               <td><h5><font color = "#082344"><fmt:message bundle="${loc}" key="language.cost"/>${order_price} </ font></h5><td>
+               <td><h5><font color = "#082344"><fmt:message bundle="${loc}" key="language.cost"/> ${order_price} BYN </ font></h5><td>
                <td><td>
                <c:if test="${(pay == null) && (error == null) && (block == null)}">
                <td><h4><a href="shop?command=pay_order" class="btn btn-warning"> <fmt:message bundle="${loc}" key="language.pay"/></a></h4></c:if></td>

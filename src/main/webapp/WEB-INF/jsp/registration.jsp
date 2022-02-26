@@ -43,12 +43,12 @@
                                 </h4>
 
                                 <div class="form-outline mb-3">
-                                    <input type="text" name="login" class="form-control form-control-lg" placeholder="<fmt:message bundle="${loc}" key="language.enterLogin"/>" />
+                                    <input type="text" name="login" class="form-control form-control-lg" required placeholder="<fmt:message bundle="${loc}" key="language.enterLogin"/>" />
                                     <label class="form-label" for="typeEmailX-2"><fmt:message bundle="${loc}" key="language.loginLimit"/></label>
                                 </div>
 
                                 <div class="form-outline mb-2">
-                                    <input type="password" name="password" class="form-control form-control-lg" placeholder="<fmt:message bundle="${loc}" key="language.enterPassword"/>" />
+                                    <input type="password" name="password" class="form-control form-control-lg" required placeholder="<fmt:message bundle="${loc}" key="language.enterPassword"/>" />
                                     <label class="form-label" for="typePasswordX-2"><fmt:message bundle="${loc}" key="language.passwordLimit"/></label>
                                 </div>
 

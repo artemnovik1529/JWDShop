@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -34,12 +33,12 @@
                                 </h4>
 
                                 <div class="form-outline mb-3">
-                                    <input type="text" name="login" class="form-control form-control-lg" />
+                                    <input type="text" name="login" class="form-control form-control-lg" required/>
                                     <label class="form-label" for="typeEmailX-2"> <fmt:message bundle="${loc}" key="language.login"/> </label>
                                 </div>
 
                                 <div class="form-outline mb-2">
-                                    <input type="password" name="password" class="form-control form-control-lg" />
+                                    <input type="password" name="password" class="form-control form-control-lg" required />
                                     <label class="form-label" for="typePasswordX-2"><fmt:message bundle="${loc}" key="language.password"/></label>
                                 </div>
                                 <button class="btn btn-warning" type="submit"><fmt:message bundle="${loc}" key="language.enter"/></button>

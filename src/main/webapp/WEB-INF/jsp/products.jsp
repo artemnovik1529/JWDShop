@@ -39,10 +39,10 @@
             </tr>
             <c:forEach var="product" items="${products}">
             <tr>
-                <td><a href="https://drive.google.com/drive/folders/1Pm4fU-_Z1-iByw8mqW1ux3-nJZChoyRt?usp=sharing"> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="36" height="36"></a></td>
+                <td><a href="https://drive.google.com/drive/folders/1Pm4fU-_Z1-iByw8mqW1ux3-nJZChoyRt?usp=sharing"> <img src="images/os-apple-dark_icon-icons.com_50847.ico" width="38" height="38"></a></td>
                 <td><c:out value="${product.name}" /></td>
                 <td><c:out value="${product.description}"/></td>
-                <td><c:out value="${product.price}" /></td>
+                <td><c:out value="${product.price} BYN" /></td>
                 <td><a href="shop?command=about_product&id_product=${product.id}&page=${requestScope['page']}" class="nav-link active" style="color: orange"><fmt:message bundle="${loc}" key="language.more"/></a>
                 </td>
                 <td><c:if test="${(sessionScope.role.name == 'customer') && (customer != null)}">
@@ -59,11 +59,15 @@
             <ul class="pagination justify-content-center">
                 <c:if test="${requestScope['page']>1}">
                     <li class="page-item">
-                        <a class="page-link" href="shop?command=show_products&page=${requestScope['page']-1}">Previous</a>
+                        <a class="page-link" style="color: gray" href="shop?command=show_products&page=${requestScope['page']-1}">Previous</a>
                     </li>
                 </c:if>
-                <li class="page-item"><a class="page-link" style="color: gray" href="shop?command=show_products&page=1">1</a></li>
-                <li class="page-item"><a class="page-link" style="color: gray" href="shop?command=show_products&page=2">2</a></li>
+                <li class="page-item">
+                    <a class="page-link" style="color: gray" href="shop?command=show_products&page=1">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" style="color: gray" href="shop?command=show_products&page=2">2</a>
+                </li>
                 <c:if test="${requestScope['page']<2}">
                     <li class="page-item">
                         <a class="page-link" style="color: gray" href="shop?command=show_products&page=${requestScope['page']+1}">Next</a>
